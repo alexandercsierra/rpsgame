@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+    <head>
+        <script>
+            var arr = ["rock", "paper", "scissors"];
+
+            function computer(){
+                return arr[Math.floor(Math.random() * Math.floor(3))];
+            }
+            function playRound(p, c) {
+                var newP = p.toLowerCase();
+                if (newP === c){
+                    return "Draw. You both picked " + c;
+                } else if (newP == "rock" && c == "scissors" || newP == "paper" && c == "rock" || newP == "scissors" && c == "paper"){
+                    return "You win! " + newP + " beats " + c;
+                } else if (newP == "rock" && c == "paper" || newP == "paper" && c == "scissors" || newP == "scissors" && c == "rock" ){
+                    return "You lose! " + c + " beats " + newP;
+                }
+            }
+
+            playRound("papER", computer());
+
+        </script>
+    </head>
+    <body>
+    </body>
+</html>
