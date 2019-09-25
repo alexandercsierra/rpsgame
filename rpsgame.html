@@ -1,27 +1,49 @@
 <!DOCTYPE html>
-    <head>
-        <style></style>
-        <script>
-            var arr = ["rock", "paper", "scissors"];
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.1/css/all.css" rel="stylesheet" type="text/css" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="container">
+      <div id="titleDiv">
+        <h1 id="title">Rock Paper Scissors</h1>
+      </div>
+      <div id = "initialChoice" class="row justify-content-center align-items-center">
+        <div class="col-6">
+          <p id="choose">Shoot:</p>
+        </div>
+        <div class="col-6">
+          <button class="btn btn-danger">ROCK <i class="far fa-hand-rock"></i></button>
+          <button class="btn btn-danger">PAPER <i class="far fa-hand-paper"></i></button>
+          <button class="btn btn-danger">SCISSORS <i class="far fa-hand-scissors"></i></button>
+        </div>
+       </div>
+       
+       
+       <div id="result" class="hide">
+       <div>
+         <h3 id="winLoss">You won!</h3>
+         <p id="outcome">sdfasd</p>
+       </div>
+        <div class="row justify-content-center">
+          <button id="playAgain" class="btn btn-primary">Play again</button> 
+        </div>
+       </div>
+    </div>
 
-            function computer(){
-                return arr[Math.floor(Math.random() * Math.floor(3))];
-            }
-            function playRound(p, c) {
-                var newP = p.toLowerCase();
-                if (newP === c){
-                    return "Draw. You both picked " + c;
-                } else if (newP == "rock" && c == "scissors" || newP == "paper" && c == "rock" || newP == "scissors" && c == "paper"){
-                    return "You win! " + newP + " beats " + c;
-                } else if (newP == "rock" && c == "paper" || newP == "paper" && c == "scissors" || newP == "scissors" && c == "rock" ){
-                    return "You lose! " + c + " beats " + newP;
-                }
-            }
 
-            playRound("papER", computer());
 
-        </script>
-    </head>
-    <body>
-    </body>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
