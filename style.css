@@ -1,57 +1,116 @@
+*{
+  /*border: 1px solid red;*/
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+}
+
+
 html {
     height: 100%;
 }
 
 body {
   text-align: center;
-  background: #200122;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to top, #6f0000, #200122);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to top, #6f0000, #200122); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  
+  font-family: 'Indie Flower', cursive;
+/*background: rgb(30,30,30);*/
+/*background: linear-gradient(357deg, rgba(30,30,30,1) 0%, rgba(4,13,63,1) 100%);*/
   height: 100%;
   margin: 0;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  color: white;
+  background: #e8e8e8;
+
 }
 
-button {
-  margin-bottom: 10px;
-  font-size: 150px;
+.container{
+  width: 80%;
+  margin: 0 auto;
+  background: white;
+  /*padding: 10% 5%;*/
 }
+
+/*button {*/
+/*  margin-bottom: 10px;*/
+/*  font-size: 150px;*/
+/*}*/
 
 .hide {
   display: none;
 }
 
-.btn {
-  display: block;
+.buttonDiv {
+  display: flex;
+  justify-content: space-around;
+  
+
 }
 
-.btn-danger {
-  /* background-color: #1c2169;
-  border-color: #1c2169; */
-  background-color: #161a4f;
-  border-color: #161a4f;
+.buttonDiv button {
+  width: 23%;
+  padding: 1% 0;
+  font-size: 1.5rem;
+  margin-bottom: 5%;
+  background: #040d3f;
+  color: white;
+  border-radius: 5px;
 }
 
-#titleDiv {
-  margin-top: 40px;
-  margin-bottom: 80px;
+.buttonDiv button:hover {
+  color: #040d3f;
+  border: 1px solid #040d3f;
+  background: white;
 }
 
-#title {
-  border: 2px solid white;
-  border-radius: 10px;
-  width: 400px;
-  margin: 0 auto;
+.titleDiv {
+  /*margin-top: 40px;*/
+  /*margin-bottom: 80px;*/
+  background-image: url(images/rps.jpg);
+  height: 50vh;
+  background-position: 50% 60%;
+  background-size: cover;
 }
 
-#choose {
-  font-size: 25px;
-  border: .5px solid white;
-  width: 100px;
-  margin: 0 auto;
-  border-radius: 10px;
+.filter {
+  background: rgba(0,0,0,.5);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+
+.titleDiv .filter h1 {
+  color: white;
+  font-size: 5rem;
+}
+
+.choose, .winLoss {
+  font-size: 3rem;
+  margin: 4% 0;
+}
+
+.outcome {
+  font-size: 2rem;
+  margin: 4% 0;
+}
+
+.playAgain{
+    width: 23%;
+  padding: 1% 0;
+  font-size: 1.5rem;
+  margin-bottom: 5%;
+  background: #040d3f;
+  color: white;
+  border-radius: 5px;
+}
+
+  @media (max-width: 900px){
+    .buttonDiv {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .buttonDiv button {
+      width: 40%;
+    }
+  }

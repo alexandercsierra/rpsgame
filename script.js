@@ -2,8 +2,8 @@ var rpsArr = ["ROCK", "PAPER", "SCISSORS"];
 var userChoice = "";
 var compChoice = "";
 var resultText = "";
-var outcome = document.getElementById("outcome");
-var winLoss = document.getElementById("winLoss");
+var outcome = document.querySelector(".outcome");
+var winLoss = document.querySelector(".winLoss");
 
 
 
@@ -11,12 +11,12 @@ $("button").click(function(){
   compChoice = randomChoice();
   userChoice = $(this).text();
   round(userChoice, compChoice);
-  $("#initialChoice").addClass("hide");
-  $("#result").removeClass("hide");
+  $(".initialChoice").addClass("hide");
+  $(".result").removeClass("hide");
   outcome.textContent = resultText;
 });
 
-$("#playAgain").click(function(){
+$(".playAgain").click(function(){
   winLoss.textContent = "";
   outcome.textContent = "";
   location.reload();
